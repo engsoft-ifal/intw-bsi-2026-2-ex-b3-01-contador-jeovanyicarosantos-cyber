@@ -1,25 +1,21 @@
 
-let contador = 0;
+let total = 0;
 
-const numero = document.getElementById("numero");
-const aumentar = document.getElementById("aumentar");
-const diminuir = document.getElementById("diminuir");
-const zerar = document.getElementById("zerar");
+const elementoTotal = document.querySelector("#total");
+const botaoSomar = document.querySelector("#somar");
+const botaoZerar = document.querySelector("#zerar");
 
-// Aumentar
-aumentar.addEventListener("click", function() {
-    contador++;
-    numero.textContent = contador;
+// Ao carregar a página
+elementoTotal.textContent = total;
+
+// Botão Somar
+botaoSomar.addEventListener("click", () => {
+    total++;
+    elementoTotal.textContent = total;
 });
 
-// Diminuir
-diminuir.addEventListener("click", function() {
-    contador--;
-    numero.textContent = contador;
-});
-
-// Zerar
-zerar.addEventListener("click", function() {
-    contador = 0;
-    numero.textContent = contador;
+// Botão Zerar
+botaoZerar.addEventListener("click", () => {
+    total = 0;
+    elementoTotal.textContent = total;
 });
